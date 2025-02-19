@@ -1,7 +1,6 @@
 import ButtonLink from "@/components/ui/ButtonLink/ButtonLink";
 import styles from "./page.module.scss";
 import Heading from "@/components/ui/Heading/Heading";
-import Link from "next/link";
 
 export default function Home() {
   return (
