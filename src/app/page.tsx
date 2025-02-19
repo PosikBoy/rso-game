@@ -1,18 +1,9 @@
-"use client";
-
-import Button from "@/components/ui/Button/Button";
+import ButtonLink from "@/components/ui/ButtonLink/ButtonLink";
 import styles from "./page.module.scss";
-import { useRouter } from "next/navigation";
 import Heading from "@/components/ui/Heading/Heading";
-import Image from "next/image";
-import logoStroke from "@/assets/logo-stroke.png";
-import classNames from "classnames";
-export default function Home() {
-  const router = useRouter();
-  const buttonHandler = () => {
-    router.push("/rules");
-  };
+import Link from "next/link";
 
+export default function Home() {
   return (
     <div className={styles["page"]}>
       <div className="container">
@@ -21,11 +12,7 @@ export default function Home() {
             <Heading heading="Интеллектуальная игра" />
             <p>«По волнам с отрядами!»</p>
           </div>
-          <Button
-            onClick={buttonHandler}
-            variant="outlined-20-gradient"
-            text="Начать игру"
-          />
+          <ButtonLink href="/rules" text="Начать игру" />
         </div>
       </div>
     </div>

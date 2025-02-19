@@ -1,0 +1,37 @@
+.button {
+  background: white; /* Белый фон кнопки */
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  span {
+    background: linear-gradient(45deg, #eb4c76, #fe5c45);
+    -webkit-background-clip: text; /* Применяем градиент к тексту */
+    background-clip: text;
+    color: transparent; /* Делаем текст прозрачным, чтобы был виден градиент */
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+      background-color: #ffe6ec;
+
+      transition: all 0.3s;
+    }
+  }
+  @media (max-width: 425px) {
+    & {
+      padding: 5px 10px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

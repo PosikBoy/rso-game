@@ -7,8 +7,9 @@ import Heading from "@/components/ui/Heading/Heading";
 import { resetToDefault } from "@/store/questions/questions.slice";
 import { useTypedDispatch } from "@/hooks/redux.hooks";
 import data from "@/data/data";
-import final from "@/assets/final.png";
+import final from "@/assets/final.jpg";
 import Image from "next/image";
+
 export default function Home() {
   const router = useRouter();
 
@@ -24,7 +25,7 @@ export default function Home() {
         <div className={styles["page__content"]}>
           <Heading heading="Спасибо за игру" />
           <div className={styles["page__image"]}>
-            <Image src={final} alt="Логотип МосРСО" />
+            <Image src={final} alt="Логотип МосРСО" quality={20} />
           </div>
           <div className={styles["page__button-next"]}>
             <Button

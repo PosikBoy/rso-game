@@ -22,7 +22,6 @@ export const questionsSlice = createSlice({
   name: "questionsSlice",
   initialState,
   reducers: {
-    // Восстановление данных, но только минимальные необходимые
     resetToDefault(state, action: PayloadAction<IQuestion[]>) {
       state.data = data.map((item) => ({
         id: item.id,
@@ -32,7 +31,6 @@ export const questionsSlice = createSlice({
       })); // хранение только ключевых данных
     },
 
-    // Обработка отметки вопроса как отвеченного
     markQuestionAnswered: (state, action: PayloadAction<number>) => {
       const question = state.data.find((q) => q.id === action.payload);
       if (question) {

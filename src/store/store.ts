@@ -11,9 +11,10 @@ const defaultData = {
       categoryName: item.categoryName,
       value: item.value,
       isAnswered: item.isAnswered,
-    })), // хранение только ключевых данных
+    })),
   },
 };
+
 const persistConfig = {
   key: "root",
   storage,
@@ -28,24 +29,22 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
-  preloadedState: defaultData as unknown as undefined,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false,
+      serializableCheck: false, // Отключаем проверку для redux-persist
     }),
 });
 
 export const persistor = persistStore(store, null, () => {
   const state = store.getState();
   if (!state.questionsSlice?.data || state.questionsSlice.data.length === 0) {
+    console.log("Запрашиваю данные из файлика");
     store.dispatch({
       type: "questionsSlice/resetToDefault",
       payload: defaultData.questionsSlice,
     });
   }
 });
-
-export default store;
 
 export type TypeRootState = ReturnType<typeof store.getState>;
 export type TypeDispatch = typeof store.dispatch;

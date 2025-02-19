@@ -1,7 +1,7 @@
 import question1 from "@/assets/question-1.jpg";
 import { StaticImageData } from "next/image";
 
-interface Question {
+export interface Question {
   id: number;
   value: number;
   question: string;
