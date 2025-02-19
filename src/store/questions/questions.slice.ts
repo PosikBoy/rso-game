@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { DataType } from "@/data/data";
+import data, { DataType } from "@/data/data";
 
 // Определяем тип минимальных данных для вопросов
 export type IQuestion = {
@@ -24,7 +24,12 @@ export const questionsSlice = createSlice({
   reducers: {
     // Восстановление данных, но только минимальные необходимые
     resetToDefault(state, action: PayloadAction<IQuestion[]>) {
-      state.data = action.payload;
+      state.data = data.map((item) => ({
+        id: item.id,
+        categoryName: item.categoryName,
+        value: item.value,
+        isAnswered: item.isAnswered,
+      })); // хранение только ключевых данных
     },
 
     // Обработка отметки вопроса как отвеченного
