@@ -1,0 +1,14 @@
+.heading {
+  font-size: 3rem;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 400;
+  text-shadow: -4px 1px 50px rgba(0, 0, 0, 0.592);
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 1rem;
+  }
+}
