@@ -55,8 +55,8 @@ export default function Menu() {
                     item.isAnswered ? "hidden" : ""
                   )}
                   onClick={() => {
-                    dispatch(markQuestionAnswered(item.id - 1));
                     router.push(`/question/${item.id}`);
+                    dispatch(markQuestionAnswered(item.id));
                   }}
                 >
                   <span>{item.value}</span>

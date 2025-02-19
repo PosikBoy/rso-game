@@ -1,8 +1,17 @@
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { DataType } from "@/data/data";
-import { createSlice } from "@reduxjs/toolkit";
+
+// Определяем тип минимальных данных для вопросов
+export type IQuestion = {
+  id: number;
+  categoryName: string;
+  isAnswered: boolean;
+  value: number;
+  // любые другие поля, которые вам нужны
+};
 
 export type IInitialState = {
-  data: DataType;
+  data: IQuestion[];
 };
 
 const initialState: IInitialState = {
@@ -13,12 +22,17 @@ export const questionsSlice = createSlice({
   name: "questionsSlice",
   initialState,
   reducers: {
-    resetToDefault(state, action) {
+    // Восстановление данных, но только минимальные необходимые
+    resetToDefault(state, action: PayloadAction<IQuestion[]>) {
       state.data = action.payload;
     },
-    markQuestionAnswered: (state, action) => {
-      console.log(state.data[action.payload].isAnswered);
-      state.data[action.payload].isAnswered = true;
+
+    // Обработка отметки вопроса как отвеченного
+    markQuestionAnswered: (state, action: PayloadAction<number>) => {
+      const question = state.data.find((q) => q.id === action.payload);
+      if (question) {
+        question.isAnswered = true;
+      }
     },
   },
 });

@@ -2,14 +2,18 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "./storage";
 import data from "@/data/data";
-import questionsSlice, { IInitialState } from "./questions/questions.slice";
+import questionsSlice from "./questions/questions.slice";
 
-const defaultData: { questionsSlice: IInitialState } = {
+const defaultData = {
   questionsSlice: {
-    data: data,
+    data: data.map((item) => ({
+      id: item.id,
+      categoryName: item.categoryName,
+      value: item.value,
+      isAnswered: item.isAnswered,
+    })), // хранение только ключевых данных
   },
 };
-
 const persistConfig = {
   key: "root",
   storage,

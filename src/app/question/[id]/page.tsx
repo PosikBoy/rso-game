@@ -8,7 +8,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-
+import data from "@/data/data";
 type Params = Promise<{
   id: string;
 }>;
@@ -19,8 +19,9 @@ const page = (props: { params: Params }) => {
 
   const params = use(props.params);
   const questionId = params.id;
-  const state = useTypedSelector((state) => state.questionsSlice.data);
-  const question = state.find((item) => item.id === Number(questionId));
+  // const state = useTypedSelector((state) => state.questionsSlice.data);
+  // const question = state.find((item) => item.id === Number(questionId));
+  const question = data.find((item) => item.id === Number(questionId));
 
   const showAnswer = () => {
     setIsAnswerShown(true);
