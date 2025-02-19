@@ -36,4 +36,12 @@
       transition: all 0.3s;
     }
   }
+  @media (max-width: 425px) {
+    & {
+      padding: 5px 10px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
 }
