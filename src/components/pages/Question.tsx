@@ -6,16 +6,30 @@ import classNames from "classnames";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Question } from "@/data/data";
-import { useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import ButtonLink from "../ui/ButtonLink/ButtonLink";
 
 const QuestionPage = ({ question }: { question: Question }) => {
   const [isAnswerShown, setIsAnswerShown] = useState(false);
+  const [timer, setTImer] = useState(
+    question.config.time ? question.config.time + 10 : 30
+  );
 
   const showAnswer = () => {
     setIsAnswerShown(true);
   };
+
+  useEffect(() => {
+    const decrementTimer = () => {
+      setTImer((prev) => {
+        return prev - 1 < 0 ? 0 : prev - 1;
+      });
+    };
+
+    const interval = setInterval(decrementTimer, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <motion.main
@@ -83,6 +97,13 @@ const QuestionPage = ({ question }: { question: Question }) => {
               <ButtonLink href="/menu" text="К категориям" />
             )}
           </div>
+        </div>
+        <div className={classNames(styles["page__timer"], styles["timer"])}>
+          <div className={styles["timer__timer"]}>{timer}</div>
+          <div
+            className={styles["timer__indicator"]}
+            style={{ width: timer * 2 + "px" }}
+          ></div>
         </div>
       </div>
     </motion.main>

@@ -1,9 +1,8 @@
-import question1 from "@/assets/question-1.jpg";
 import { StaticImageData } from "next/image";
 
 export interface Question {
   id: number;
-  value: number;
+  value: number | string;
   question: string;
   answer: string;
   categoryName: string;
@@ -20,349 +19,291 @@ const data: Question[] = [
   {
     id: 1,
     value: 100,
-    question: "Какая основная обязанность вожатого в лагере?",
+    question:
+      "Как называются танцы, которые вожатые танцуют на сцене, а дети повторяют?",
     categoryName: "Вожатство",
-    answer: "Обеспечить безопасность детей и организовать их досуг",
+    answer: "Сипелки",
     isAnswered: false,
-    config: {
-      questionImage: question1,
-      answerImage: question1,
-      time: 5,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 2,
     value: 200,
-    question: "Что должен делать вожатый, чтобы поддерживать дисциплину?",
+    question:
+      "Если ребёнок спрашивает, сколько лет вожатому, какой возраст нужно назвать?",
     categoryName: "Вожатство",
-    answer: "Устанавливать четкие правила и следить за их соблюдением",
+    answer: "48",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 10,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 3,
     value: 300,
-    question:
-      "Какой подход лучше всего помогает вожатому наладить контакт с детьми?",
+    question: "Как называется помещение, где живёт вожатый?",
     categoryName: "Вожатство",
-    answer: "Быть терпеливым и показывать личный пример",
+    answer: "Вожатская",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 15,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 4,
     value: 400,
-    question: "Как вожатый может эффективно управлять конфликтами в отряде?",
+    question: "Планёрка – это?",
     categoryName: "Вожатство",
-    answer: "Проводить индивидуальные беседы и поддерживать честность",
+    answer:
+      "Собрание вожатых педагогического коллектива в лагере где обсуждается прошедший и предстоящий дни",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 20,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 5,
     value: 500,
-    question: "Что помогает вожатому развить лидерские качества среди детей?",
+    question: "В каком году появился Вожатский галстук?",
     categoryName: "Вожатство",
-    answer: "Давать детям ответственность и поощрять инициативу",
+    answer: "1922",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 25,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
-
-  // Категория: Лагерь
   {
     id: 6,
-    value: 100,
-    question: "Как называется место для ночных посиделок и костров в лагере?",
-    categoryName: "Лагерь",
-    answer: "Костровая площадка",
+    value: "Бонус",
+    question: "Бонусный раунд",
+    categoryName: "Вожатство",
+    answer: "Бонусный ответ",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 5,
-    },
-  },
-  {
-    id: 7,
-    value: 200,
-    question: "Какие мероприятия помогают улучшить атмосферу в лагере?",
-    categoryName: "Лагерь",
-    answer: "Киновечера, конкурсы, спортивные соревнования",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 10,
-    },
-  },
-  {
-    id: 8,
-    value: 300,
-    question: "Как организуются ночные мероприятия в лагере?",
-    categoryName: "Лагерь",
-    answer:
-      "Устроить костер с песнями и играми или ночные приключенческие квесты",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 15,
-    },
-  },
-  {
-    id: 9,
-    value: 400,
-    question: "Что делают дети на утренней зарядке в лагере?",
-    categoryName: "Лагерь",
-    answer:
-      "Выполняют простые физические упражнения, чтобы зарядиться энергией на день",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 20,
-    },
-  },
-  {
-    id: 10,
-    value: 500,
-    question:
-      "Какие традиционные мероприятия проводятся в конце лагерной смены?",
-    categoryName: "Лагерь",
-    answer: "Прощальный вечер, вручение грамот и подарков",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 25,
-    },
-  },
-
-  // Категория: Песни
-  {
-    id: 11,
-    value: 100,
-    question:
-      "Как называется популярная песня, которую часто поют на лагерных кострах?",
-    categoryName: "Песни",
-    answer: "Калинка",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 5,
-    },
-  },
-  {
-    id: 12,
-    value: 200,
-    question: "Какая песня является гимном лагеря?",
-    categoryName: "Песни",
-    answer: "Лагерный марш",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 10,
-    },
-  },
-  {
-    id: 13,
-    value: 300,
-    question: "Какая песня является символом дружбы и сплоченности в лагере?",
-    categoryName: "Песни",
-    answer: "Мы вместе",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 15,
-    },
-  },
-  {
-    id: 14,
-    value: 400,
-    question: "Какие песни можно петь на спортивных мероприятиях в лагере?",
-    categoryName: "Песни",
-    answer: "Песни о победе и командном духе",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 20,
-    },
-  },
-  {
-    id: 15,
-    value: 500,
-    question: "Какие песни чаще всего выбирают дети для лагерных концертов?",
-    categoryName: "Песни",
-    answer: "Популярные и простые для запоминания песни",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 25,
-    },
-  },
-
-  // Категория: Отряды
-  {
-    id: 16,
-    value: 100,
-    question: "Как называется группа детей, которая работает вместе в лагере?",
-    categoryName: "Отряды",
-    answer: "Отряд",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 5,
-    },
-  },
-  {
-    id: 17,
-    value: 200,
-    question: "Что помогает укрепить командный дух в отряде?",
-    categoryName: "Отряды",
-    answer: "Совместные мероприятия и взаимная поддержка",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 10,
-    },
-  },
-  {
-    id: 18,
-    value: 300,
-    question:
-      "Какой отряд имеет наибольшие шансы на победу в лагерных конкурсах?",
-    categoryName: "Отряды",
-    answer: "Тот, кто действует слаженно и проявляет командный дух",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 15,
-    },
-  },
-  {
-    id: 19,
-    value: 400,
-    question: "Какие факторы влияют на успех отряда в лагере?",
-    categoryName: "Отряды",
-    answer: "Лидерские качества вожатого, поддержка и активное участие детей",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 20,
-    },
-  },
-  {
-    id: 20,
-    value: 500,
-    question:
-      "Как вожатый может сделать так, чтобы отряд работал как единая команда?",
-    categoryName: "Отряды",
-    answer:
-      "Организовать групповые задания, развивать лидерские качества детей",
-    isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 25,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
 
   // Категория: Дети
   {
-    id: 21,
+    id: 7,
     value: 100,
-    question: "Что дети должны делать перед ужином в лагере?",
+    question: "Когда отмечают Международный день защиты детей?",
     categoryName: "Дети",
-    answer: "Помыть руки и собраться в столовой",
+    answer: "1 июня",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 5,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 8,
+    value: 200,
+    question:
+      "В комнате 5 углов. В каждом углу стоит стул. На каждом стуле сидит ребёнок. Сколько всего детей в комнате?",
+    categoryName: "Дети",
+    answer: "5",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 9,
+    value: 300,
+    question:
+      "На какой кружок по статистике больше всего любят ходить дети в лагере?",
+    categoryName: "Дети",
+    answer: "Спорт/спортивные игры",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 10,
+    value: 400,
+    question: "Крылатая фраза гласит, что дети – это…",
+    categoryName: "Дети",
+    answer: "Цветы жизни",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 11,
+    value: 500,
+    question:
+      "Считается, что раньше внизу масштабных полотен на религиозную тематику художники дорисовывали собак. Зачем?",
+    categoryName: "Дети",
+    answer: "Увлечь детей",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 12,
+    value: "Бонус",
+    question: "Бонусный раунд",
+    categoryName: "Дети",
+    answer: "Бонусный ответ",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+
+  // Категория: Лагерь
+  {
+    id: 13,
+    value: 100,
+    question: "Сколько обычно приёмов пищи в лагере?",
+    categoryName: "Лагерь",
+    answer: "5",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 14,
+    value: 200,
+    question: "До какого возраста дети могут приехать в лагерь?",
+    categoryName: "Лагерь",
+    answer: "До 17 включительно",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 15,
+    value: 300,
+    question: "Как называется отрядное место, где висят плакаты и грамоты?",
+    categoryName: "Лагерь",
+    answer: "Отрядный уголок",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 16,
+    value: 400,
+    question: "Как расшифровывается ДОЛ?",
+    categoryName: "Лагерь",
+    answer: "Детский оздоровительный лагерь",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 17,
+    value: 500,
+    question: "Как называется первый в России лагерь?",
+    categoryName: "Лагерь",
+    answer: "Артек",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 18,
+    value: "Бонус",
+    question: "Бонусный раунд",
+    categoryName: "Лагерь",
+    answer: "Бонусный ответ",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+
+  // Категория: Песни
+  {
+    id: 19,
+    value: 100,
+    question:
+      "Я с тобой спорить не хочу И доказывать, кто и что ты, Хочешь, я завтра же прилечу? Только где они, …?",
+    categoryName: "Песни",
+    answer: "Самолёты",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 20,
+    value: 200,
+    question: "Это всё РСО, команда…",
+    categoryName: "Песни",
+    answer: "Сильных",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 21,
+    value: 300,
+    question: "Снова в …, снова с тобой, снова мечты ворвутся в реальность!",
+    categoryName: "Песни",
+    answer: "Отряд",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 22,
-    value: 200,
-    question: "Как дети могут участвовать в выборе мероприятий для отряда?",
-    categoryName: "Дети",
-    answer: "Предлагать идеи на утренних совещаниях или на собрании отряда",
+    value: 400,
+    question: "Твоя улыбка … красит, Не важно, какого цвета она!",
+    categoryName: "Песни",
+    answer: "Бойцовку",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 10,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 23,
-    value: 300,
-    question:
-      "Какие мероприятия развивают творческие способности детей в лагере?",
-    categoryName: "Дети",
-    answer: "Творческие мастер-классы, конкурсы, концерты",
+    value: 500,
+    question: "Эй, …! В наших душах горит пожар",
+    categoryName: "Песни",
+    answer: "Брат",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 15,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
   {
     id: 24,
-    value: 400,
-    question: "Что важно при организации досуга детей в лагере?",
-    categoryName: "Дети",
-    answer:
-      "Сбалансировать активные и спокойные игры, чтобы не перегрузить детей",
+    value: "Бонус",
+    question: "Бонусный раунд",
+    categoryName: "Песни",
+    answer: "Бонусный ответ",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 20,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
+
+  // Категория: Отряды
   {
     id: 25,
-    value: 500,
-    question: "Как дети могут научиться работать в команде в лагере?",
-    categoryName: "Дети",
-    answer:
-      "Участвуя в командных играх, развивая коммуникацию и сотрудничество",
+    value: 100,
+    question: "Когда празднуется день РСО?",
+    categoryName: "Отряды",
+    answer: "17 февраля",
     isAnswered: false,
-    config: {
-      questionImage: null,
-      answerImage: null,
-      time: 25,
-    },
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 26,
+    value: 200,
+    question:
+      "Сколько лет исполняется движению студенческих отрядов в 2025 году?",
+    categoryName: "Отряды",
+    answer: "66",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 27,
+    value: 300,
+    question:
+      "Как называется человек в отряде, отвечающий, в первую очередь, за трудоустройство?",
+    categoryName: "Отряды",
+    answer: "Командир",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 28,
+    value: 400,
+    question: "Спевка – это?",
+    categoryName: "Отряды",
+    answer: "Коллективное исполнение песен в орлятском кругу",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 29,
+    value: 500,
+    question: "Что изображено на шевроне РСО?",
+    categoryName: "Отряды",
+    answer: "Мастерок, восходящее солнце, книга",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
+  },
+  {
+    id: 30,
+    value: "Бонус",
+    question: "Бонусный раунд",
+    categoryName: "Отряды",
+    answer: "Бонусный ответ",
+    isAnswered: false,
+    config: { questionImage: null, answerImage: null, time: 30 },
   },
 ];
 
 export default data;
-
 export type DataType = Question[];

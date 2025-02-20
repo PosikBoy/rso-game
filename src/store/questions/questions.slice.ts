@@ -6,7 +6,7 @@ export type IQuestion = {
   id: number;
   categoryName: string;
   isAnswered: boolean;
-  value: number;
+  value: number | string;
   // любые другие поля, которые вам нужны
 };
 

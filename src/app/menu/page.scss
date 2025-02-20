@@ -94,7 +94,7 @@
 
 .questions {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+  grid-template-columns: repeat(6, 1fr); /* 5 колонок */
   grid-template-rows: repeat(5, 1fr); /* 5 строк */
   gap: 5px; /* Отступы между элементами */
   width: 100%;
