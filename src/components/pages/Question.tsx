@@ -98,13 +98,15 @@ const QuestionPage = ({ question }: { question: Question }) => {
             )}
           </div>
         </div>
-        <div className={classNames(styles["page__timer"], styles["timer"])}>
-          <div className={styles["timer__timer"]}>{timer}</div>
-          <div
-            className={styles["timer__indicator"]}
-            style={{ width: timer * 2 + "px" }}
-          ></div>
-        </div>
+        {!isAnswerShown && (
+          <div className={classNames(styles["page__timer"], styles["timer"])}>
+            <div className={styles["timer__timer"]}>{timer}</div>
+            <div
+              className={styles["timer__indicator"]}
+              style={{ width: timer * 2 + "px" }}
+            ></div>
+          </div>
+        )}
       </div>
     </motion.main>
   );
