@@ -4,25 +4,30 @@ import Question3 from "@/assets/question-3.webp";
 
 import Question4 from "@/assets/question-4.webp";
 import Question5 from "@/assets/question-5.webp";
+import Question6 from "@/assets/question-6.webp";
 import Question7 from "@/assets/question-7.webp";
 import Question8 from "@/assets/question-8.webp";
 import Question9 from "@/assets/question-9.webp";
 import Question11 from "@/assets/question-11.webp";
+import Question12 from "@/assets/question-12.webp";
 import Question13 from "@/assets/question-13.webp";
 import Question14 from "@/assets/question-14.webp";
 import Question15 from "@/assets/question-15.webp";
 import Question16 from "@/assets/question-16.webp";
 import Question17 from "@/assets/question-17.webp";
+import Question18 from "@/assets/question-18.webp";
 import Question19 from "@/assets/question-19.webp";
 import Question20 from "@/assets/question-20.webp";
 import Question21 from "@/assets/question-21.webp";
 import Question22 from "@/assets/question-22.webp";
 import Question23 from "@/assets/question-23.webp";
+import Question24 from "@/assets/question-24.webp";
 import Question25 from "@/assets/question-25.webp";
 import Question26 from "@/assets/question-26.webp";
 import Question27 from "@/assets/question-27.webp";
 import Question28 from "@/assets/question-28.webp";
 import Question29 from "@/assets/question-29.webp";
+import Question30 from "@/assets/question-30.webp";
 
 export interface Question {
   id: number;
@@ -95,7 +100,7 @@ const data: Question[] = [
     categoryName: "Вожатство",
     answer: 'У Веры любимая сипелка это "Я равен небу"',
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question6, answerImage: null, time: 30 },
   },
 
   // Категория: Дети
@@ -154,7 +159,7 @@ const data: Question[] = [
     categoryName: "Дети",
     answer: "Любимый возраст у Юлии Чирковой это старший!",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question12, answerImage: null, time: 30 },
   },
 
   // Категория: Лагерь
@@ -207,11 +212,11 @@ const data: Question[] = [
   {
     id: 18,
     value: "Бонус",
-    question: "Какое любимое мероприятие в лагере у Алисы Технозарядовой?",
+    question: "Какое любимое мероприятие в лагере у Алисы Технерядновой?",
     categoryName: "Лагерь",
     answer: 'Её любимое мероприятие это "обнимашки"',
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question18, answerImage: null, time: 30 },
   },
 
   // Категория: Песни
@@ -268,7 +273,7 @@ const data: Question[] = [
     categoryName: "Песни",
     answer: "Даже презентация не знает ответ на этот вопрос...",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question24, answerImage: null, time: 30 },
   },
 
   // Категория: Отряды
@@ -326,7 +331,7 @@ const data: Question[] = [
     categoryName: "Отряды",
     answer: "ДеТали",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question30, answerImage: null, time: 30 },
   },
 ];
 
