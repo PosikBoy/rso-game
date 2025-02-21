@@ -70,6 +70,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
                     alt="question"
                     quality={50}
                     loading="eager"
+                    priority
                   />
                 </div>
               )}
