@@ -1,4 +1,28 @@
 import { StaticImageData } from "next/image";
+import Question1 from "@/assets/question-1.webp";
+import Question3 from "@/assets/question-3.webp";
+
+import Question4 from "@/assets/question-4.webp";
+import Question5 from "@/assets/question-5.webp";
+import Question7 from "@/assets/question-7.webp";
+import Question8 from "@/assets/question-8.webp";
+import Question9 from "@/assets/question-9.webp";
+import Question11 from "@/assets/question-11.webp";
+import Question13 from "@/assets/question-13.webp";
+import Question14 from "@/assets/question-14.webp";
+import Question15 from "@/assets/question-15.webp";
+import Question16 from "@/assets/question-16.webp";
+import Question17 from "@/assets/question-17.webp";
+import Question19 from "@/assets/question-19.webp";
+import Question20 from "@/assets/question-20.webp";
+import Question21 from "@/assets/question-21.webp";
+import Question22 from "@/assets/question-22.webp";
+import Question23 from "@/assets/question-23.webp";
+import Question25 from "@/assets/question-25.webp";
+import Question26 from "@/assets/question-26.webp";
+import Question27 from "@/assets/question-27.webp";
+import Question28 from "@/assets/question-28.webp";
+import Question29 from "@/assets/question-29.webp";
 
 export interface Question {
   id: number;
@@ -22,9 +46,9 @@ const data: Question[] = [
     question:
       "Как называются танцы, которые вожатые танцуют на сцене, а дети повторяют?",
     categoryName: "Вожатство",
-    answer: "Сипелки",
+    answer: "Эти зажигательные танцы называются сипелками",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question1, answerImage: Question1, time: 30 },
   },
   {
     id: 2,
@@ -43,7 +67,7 @@ const data: Question[] = [
     categoryName: "Вожатство",
     answer: "Вожатская",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question3, answerImage: Question3, time: 30 },
   },
   {
     id: 4,
@@ -53,7 +77,7 @@ const data: Question[] = [
     answer:
       "Собрание вожатых педагогического коллектива в лагере где обсуждается прошедший и предстоящий дни",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question4, answerImage: Question4, time: 30 },
   },
   {
     id: 5,
@@ -62,7 +86,7 @@ const data: Question[] = [
     categoryName: "Вожатство",
     answer: "1922",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question5, answerImage: Question5, time: 30 },
   },
   {
     id: 6,
@@ -82,7 +106,7 @@ const data: Question[] = [
     categoryName: "Дети",
     answer: "1 июня",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question7, answerImage: Question7, time: 30 },
   },
   {
     id: 8,
@@ -92,7 +116,7 @@ const data: Question[] = [
     categoryName: "Дети",
     answer: "5",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question8, answerImage: Question8, time: 30 },
   },
   {
     id: 9,
@@ -102,7 +126,7 @@ const data: Question[] = [
     categoryName: "Дети",
     answer: "Спорт/спортивные игры",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question9, answerImage: Question9, time: 30 },
   },
   {
     id: 10,
@@ -121,7 +145,7 @@ const data: Question[] = [
     categoryName: "Дети",
     answer: "Увлечь детей",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question11, answerImage: Question11, time: 30 },
   },
   {
     id: 12,
@@ -139,9 +163,10 @@ const data: Question[] = [
     value: 100,
     question: "Сколько обычно приёмов пищи в лагере?",
     categoryName: "Лагерь",
-    answer: "5",
+    answer:
+      "Обычно в лагерях 5 приемов пищи. Это завтрак, обед, полдник, ужин и второй ужин.",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question13, answerImage: Question13, time: 30 },
   },
   {
     id: 14,
@@ -150,16 +175,16 @@ const data: Question[] = [
     categoryName: "Лагерь",
     answer: "До 17 включительно",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question14, answerImage: Question14, time: 30 },
   },
   {
     id: 15,
     value: 300,
     question: "Как называется отрядное место, где висят плакаты и грамоты?",
     categoryName: "Лагерь",
-    answer: "Отрядный уголок",
+    answer: "Отрядный уголок.",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question15, answerImage: Question15, time: 30 },
   },
   {
     id: 16,
@@ -168,7 +193,7 @@ const data: Question[] = [
     categoryName: "Лагерь",
     answer: "Детский оздоровительный лагерь",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question16, answerImage: Question16, time: 30 },
   },
   {
     id: 17,
@@ -177,7 +202,7 @@ const data: Question[] = [
     categoryName: "Лагерь",
     answer: "Артек",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question17, answerImage: Question17, time: 30 },
   },
   {
     id: 18,
@@ -198,7 +223,7 @@ const data: Question[] = [
     categoryName: "Песни",
     answer: "Самолёты",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question19, answerImage: Question19, time: 30 },
   },
   {
     id: 20,
@@ -207,7 +232,7 @@ const data: Question[] = [
     categoryName: "Песни",
     answer: "Сильных",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question20, answerImage: Question20, time: 30 },
   },
   {
     id: 21,
@@ -216,7 +241,7 @@ const data: Question[] = [
     categoryName: "Песни",
     answer: "Отряд",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question21, answerImage: Question21, time: 30 },
   },
   {
     id: 22,
@@ -225,7 +250,7 @@ const data: Question[] = [
     categoryName: "Песни",
     answer: "Бойцовку",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question22, answerImage: Question22, time: 30 },
   },
   {
     id: 23,
@@ -234,7 +259,7 @@ const data: Question[] = [
     categoryName: "Песни",
     answer: "Брат",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question23, answerImage: Question23, time: 30 },
   },
   {
     id: 24,
@@ -254,7 +279,7 @@ const data: Question[] = [
     categoryName: "Отряды",
     answer: "17 февраля",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question25, answerImage: Question25, time: 30 },
   },
   {
     id: 26,
@@ -264,7 +289,7 @@ const data: Question[] = [
     categoryName: "Отряды",
     answer: "66",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question26, answerImage: Question26, time: 30 },
   },
   {
     id: 27,
@@ -274,7 +299,7 @@ const data: Question[] = [
     categoryName: "Отряды",
     answer: "Командир",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question27, answerImage: Question27, time: 30 },
   },
   {
     id: 28,
@@ -283,7 +308,7 @@ const data: Question[] = [
     categoryName: "Отряды",
     answer: "Коллективное исполнение песен в орлятском кругу",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question28, answerImage: Question28, time: 30 },
   },
   {
     id: 29,
@@ -292,7 +317,7 @@ const data: Question[] = [
     categoryName: "Отряды",
     answer: "Мастерок, восходящее солнце, книга",
     isAnswered: false,
-    config: { questionImage: null, answerImage: null, time: 30 },
+    config: { questionImage: Question29, answerImage: Question29, time: 30 },
   },
   {
     id: 30,

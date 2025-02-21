@@ -12,7 +12,7 @@ import ButtonLink from "../ui/ButtonLink/ButtonLink";
 const QuestionPage = ({ question }: { question: Question }) => {
   const [isAnswerShown, setIsAnswerShown] = useState(false);
   const [timer, setTImer] = useState(
-    question.config.time ? question.config.time + 10 : 30
+    question.config.time ? question.config.time : 30
   );
 
   const showAnswer = () => {
@@ -65,12 +65,22 @@ const QuestionPage = ({ question }: { question: Question }) => {
             <div className={styles["question__row"]}>
               {!isAnswerShown && question.config.questionImage && (
                 <div className={styles["question__image"]}>
-                  <Image src={question.config.questionImage} alt="question" />
+                  <Image
+                    src={question.config.questionImage}
+                    alt="question"
+                    quality={50}
+                    loading="eager"
+                  />
                 </div>
               )}
               {isAnswerShown && question.config.answerImage && (
                 <div className={styles["question__image"]}>
-                  <Image src={question.config.answerImage} alt="question" />
+                  <Image
+                    src={question.config.answerImage}
+                    alt="question"
+                    quality={50}
+                    loading="eager"
+                  />
                 </div>
               )}
               <div
