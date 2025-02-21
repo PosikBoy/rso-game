@@ -19,7 +19,7 @@ export default function Home() {
               </span>
             </li>
             <li className={styles["rules__item"]}>
-              <span>Время на обсуждение ответа ограничено 60 секундами.</span>
+              <span>Время на обсуждение ответа ограничено 30 секундами.</span>
             </li>
             <li className={styles["rules__item"]}>
               <span>
