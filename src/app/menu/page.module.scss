@@ -92,6 +92,21 @@
   }
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px;
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+  @media (max-width: 425px) {
+    & {
+      padding: 10px;
+    }
+  }
+}
+
 .questions {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 5 колонок */

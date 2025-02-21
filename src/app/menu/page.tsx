@@ -1,14 +1,12 @@
 "use client";
 
-import Button from "@/components/ui/Button/Button";
-import "./page.scss";
 import { useTypedDispatch, useTypedSelector } from "@/hooks/redux.hooks";
 import { markQuestionAnswered } from "@/store/questions/questions.slice";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import Heading from "@/components/ui/Heading/Heading";
-import Link from "next/link";
 import ButtonLink from "@/components/ui/ButtonLink/ButtonLink";
+import styles from "./page.module.scss";
 
 export default function Menu() {
   const dispatch = useTypedDispatch();
@@ -24,27 +22,37 @@ export default function Menu() {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.5 }}
-      className="page"
+      className={styles["page"]}
     >
-      <div className="container">
-        <div className="page__content">
+      <div className={styles["container"]}>
+        <div className={styles["page__content"]}>
           <Heading heading="Выберите категорию и количество баллов" />
 
-          <div className="page__menu">
-            <ul className="page__categories categories">
+          <div className={styles["page__menu"]}>
+            <ul
+              className={classNames(
+                styles["page__categories"],
+                styles["categories"]
+              )}
+            >
               {uniqueCategories.map((category) => (
-                <li key={category} className="categories__item">
+                <li key={category} className={styles["categories__item"]}>
                   <h2>{category}</h2>
                 </li>
               ))}
             </ul>
-            <ul className="page__questions questions">
+            <ul
+              className={classNames(
+                styles["page__questions"],
+                styles["questions"]
+              )}
+            >
               {data.map((item) => (
                 <ButtonLink
                   key={item.id}
                   className={classNames(
-                    "questions__item",
-                    item.isAnswered ? "hidden" : ""
+                    styles["questions__item"],
+                    item.isAnswered ? styles["hidden"] : ""
                   )}
                   href={`/question/${item.id}`}
                   onClick={() => {
@@ -55,11 +63,11 @@ export default function Menu() {
               ))}
             </ul>
           </div>
-          <div className="page__navigation">
-            <div className="page__button-rules">
+          <div className={styles["page__navigation"]}>
+            <div className={styles["page__button-rules"]}>
               <ButtonLink href="/rules" text="Вернуться к правилам" />
             </div>
-            <div className="page__button-rules">
+            <div className={styles["page__button-rules"]}>
               <ButtonLink href="/results" text="Завершить игру" />
             </div>
           </div>
