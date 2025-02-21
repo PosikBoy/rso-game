@@ -271,7 +271,7 @@ const data: Question[] = [
     value: "Бонус",
     question: "Какая любимая песня у Дарьи Казмалы?",
     categoryName: "Песни",
-    answer: "Даже презентация не знает ответ на этот вопрос...",
+    answer: "ССО Монолит — «Факел»",
     isAnswered: false,
     config: { questionImage: Question24, answerImage: null, time: 30 },
   },
