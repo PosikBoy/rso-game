@@ -63,7 +63,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
               {question.question}
             </div>
             <div className={styles["question__row"]}>
-              {!isAnswerShown && question.config.questionImage && (
+              {question.config.questionImage && (
                 <div className={styles["question__image"]}>
                   <Image
                     src={question.config.questionImage}
@@ -73,16 +73,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
                   />
                 </div>
               )}
-              {isAnswerShown && question.config.answerImage && (
-                <div className={styles["question__image"]}>
-                  <Image
-                    src={question.config.answerImage}
-                    alt="question"
-                    quality={50}
-                    loading="eager"
-                  />
-                </div>
-              )}
+
               <div
                 className={classNames(
                   styles["question__answer"],

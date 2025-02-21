@@ -32,7 +32,7 @@ export interface Question {
   categoryName: string;
   isAnswered: boolean;
   config: {
-    questionImage: StaticImageData | null;
+    questionImage: string | StaticImageData | null;
     answerImage: StaticImageData | null;
     time: number | null;
   };
