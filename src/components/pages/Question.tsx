@@ -39,7 +39,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
       transition={{ duration: 0.5 }}
       className={styles["page"]}
     >
-      <div className="container">
+      <div className={styles["page__container"]}>
         <div className={styles["page__content"]}>
           <header
             className={classNames(styles["page__header"], styles["header"])}
@@ -68,7 +68,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
                   <Image
                     src={question.config.questionImage}
                     alt="question"
-                    quality={50}
+                    quality={80}
                     loading="eager"
                     priority
                   />
