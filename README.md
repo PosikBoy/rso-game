@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Интеллектуальная игра "По волнам с отрядами"
 
-## Getting Started
+Этот проект я делал для открытия школы вожатых от организации [МосРСО](https://vk.com/mosrso_spo)
 
-First, run the development server:
+## Демонстрация
+
+Игра доступна по [ссылке](https://rso-game.vercel.app/)
+
+## Запуск проекта локально
+
+Для запуска игры, выполните следующие команды в терминале Windows/Linux. Перед этим необходимо установить [Node.js](https://nodejs.org/en) и [Git](https://git-scm.com/downloads)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/PosikBoy/rso-game
+
+cd ./rso-game
+
+npm i
+
+npm run build
+
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Далее откройте ссылку [http://localhost:3000](http://localhost:3000) в браузере, игра будет доступна локально.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## О проекте
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Проект сделан с использованием фреймворка [Next.js] (https://nextjs.org/). Это мой любимый фреймворк.
 
-## Learn More
+В качестве State-Manager используется Redux-Toolkit. Redux-Persist для сохранения состояния в локальном хранилище.
 
-To learn more about Next.js, take a look at the following resources:
+Для анимаций страниц используется motion.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Верстка сделана только для компа, в частности для большого экрана на сцене Московского Политехнического Университета. Поэтому на телефоне и на 16:9 мониторе открывается достаточно криво. Решение: делайте масштаб браузера 67%
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Спасибо за прочтение!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Пусть ваш сегодняшний день будет наполнен яркими моментами!

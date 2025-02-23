@@ -26,8 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className="layout">
-        <ReduxProvider>{children}</ReduxProvider>
+      <body>
+        <main className="layout">
+          <ReduxProvider>{children}</ReduxProvider>
+        </main>
       </body>
     </html>
   );

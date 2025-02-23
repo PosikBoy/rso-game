@@ -32,7 +32,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
   }, []);
 
   return (
-    <motion.main
+    <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
@@ -71,6 +71,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
                     quality={80}
                     loading="eager"
                     priority
+                    fill
                   />
                 </div>
               )}
@@ -110,7 +111,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
           </div>
         )}
       </div>
-    </motion.main>
+    </motion.div>
   );
 };
 
